@@ -21,4 +21,17 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
+# 9alk khas n copy so i can publish the build artifact
+# not used anymore if m gonna use a pipeline artifact
+- task: CopyFiles@2
+  inputs:
+   Contents: '**/*.war'
+   targetFolder: '$(Build.ArtifactStagingDirectory)'
+   
+#this task is to publish 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 
