@@ -8,5 +8,6 @@
 </head>
 <body>
 hi it works
+    Hello i'm trying to use CI/CD pipelines of DevOps Azure
 </body>
 </html>
