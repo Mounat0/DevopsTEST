@@ -24,6 +24,21 @@
             <version>2.0</version>
             <scope>provided</scope>
         </dependency>
+        
+        <!-- Log4j hada -->
+        <dependency>
+        	<groupId>log4j</groupId>
+        	<artifactId>log4j</artifactId>
+        	<version>1.2.14</version>
+        	<!-- You can ommit this because it is default -->
+        	<scope>compile</scope>
+    	</dependency>
+        
+      	<dependency>
+    		<groupId>commons-lang</groupId>
+    		<artifactId>commons-lang</artifactId>
+    		<version>2.6</version>
+    	</dependency>
     </dependencies>
     <build>
         <finalName>MavenWebApp</finalName>
