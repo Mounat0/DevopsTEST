@@ -35,3 +35,15 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
+# ... Risky but ok
+- task: CopyFiles@2
+  inputs:
+   Contents: '**/*.jar'
+   targetFolder: '$(Build.ArtifactStagingDirectory)'
+   
+#this task is to publish 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'dropJar'
+    publishLocation: 'Container'
