@@ -9,37 +9,65 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>Devops Maven Webapp</name>
     <url>http://maven.apache.org</url>
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/javax.servlet/jsp-api -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>2.0</version>
-            <scope>provided</scope>
-        </dependency>
-        
-        <!-- Log4j hada -->
-        <dependency>
-        	<groupId>log4j</groupId>
-        	<artifactId>log4j</artifactId>
-        	<version>1.2.14</version>
-        	<!-- You can ommit this because it is default -->
-        	<scope>compile</scope>
-    	</dependency>
-        
-      	<dependency>
-    		<groupId>commons-lang</groupId>
-    		<artifactId>commons-lang</artifactId>
-    		<version>2.6</version>
-    	</dependency>
-    </dependencies>
+	    <dependencies>
+	        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+	        <dependency>
+	            <groupId>javax.servlet</groupId>
+	            <artifactId>javax.servlet-api</artifactId>
+	            <version>3.1.0</version>
+	            <scope>provided</scope>
+	        </dependency>
+	        <!-- https://mvnrepository.com/artifact/javax.servlet/jsp-api -->
+	        <dependency>
+	            <groupId>javax.servlet</groupId>
+	            <artifactId>jsp-api</artifactId>
+	            <version>2.0</version>
+	            <scope>provided</scope>
+	        </dependency>
+	        
+	        <!-- Log4j hada -->
+	        <dependency>
+	        	<groupId>log4j</groupId>
+	        	<artifactId>log4j</artifactId>
+	        	<version>1.2.14</version>
+	        	<!-- You can ommit this because it is default -->
+	        	<scope>compile</scope>
+	    	</dependency>
+	        
+	      	<dependency>
+	    		<groupId>commons-lang</groupId>
+	    		<artifactId>commons-lang</artifactId>
+	    		<version>2.6</version>
+	    	</dependency>
+	    </dependencies>
+	    
+	    <!-- this is what i added in pom file inside repositories and distributionManagement element -->
+	    	
+    	<repositories>
+    		<repository>
+  				<id>dev-azure-com-munat-mounatfeed</id>
+  				<url>https://pkgs.dev.azure.com/munat/_packaging/MounatFeed/maven/v1</url>
+  				<releases>
+    				<enabled>true</enabled>
+  				</releases>
+  				<snapshots>
+    				<enabled>true</enabled>
+  				</snapshots>
+			</repository>
+		</repositories>
+		<distributionManagement>
+    		<repository>
+			  <id>dev-azure-com-munat-mounatfeed</id>
+			  <url>https://pkgs.dev.azure.com/munat/_packaging/MounatFeed/maven/v1</url>
+			  <releases>
+			  	<enabled>true</enabled>
+			  </releases>
+			  <snapshots>
+			    <enabled>true</enabled>
+			  </snapshots>
+			</repository>
+		 </distributionManagement>
+    
     <build>
         <finalName>MavenWebApp</finalName>
         <sourceDirectory>src</sourceDirectory>
