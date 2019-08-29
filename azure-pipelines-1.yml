@@ -13,11 +13,11 @@ steps:
 - task: cURLUploader@2
   inputs:
     files: 
-    Content: '*.jar'
+    Content: '**/*.jar'
     authType: 'UserAndPass'
     username: 'mounat'
     password: '123456'
-    url: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar'
+    url: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/'
     downloadPath: '$(System.ArtifactsDirectory)'
 
 
