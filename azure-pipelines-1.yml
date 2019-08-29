@@ -20,7 +20,10 @@ steps:
     url: 'https://www-eu.apache.org/dist//commons/lang/source/commons-lang-2.6-src.zip'
     remotePath: 'upload/$(Build.ArtifactStagingDirectory)/'
 
-
+- task: CopyFiles@2
+  inputs:
+   Contents: '**/*.zip'
+   targetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
