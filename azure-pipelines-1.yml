@@ -10,10 +10,19 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: cURLUploader@2
+  inputs:
+    files: 'commons-lang'
+    url: 'https://www-eu.apache.org/dist//commons/lang/source/commons-lang-2.6-src.zip'
+    remotePath: 'upload/$(Build.ArtifactStagingDirectory)/'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: CopyFiles@2
+  inputs:
+   Contents: '**/*.jar'
+   targetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'dropJar'
+    publishLocation: 'Container'
