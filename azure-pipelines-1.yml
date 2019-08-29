@@ -13,7 +13,7 @@ steps:
 - task: cURLUploader@2
   inputs:
     files: 
-      Contents: '***.zip'
+    Contents: '***.zip'
     authType: 'UserAndPass'
     username: 'mounat'
     password: '123456'
