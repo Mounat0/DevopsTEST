@@ -12,17 +12,14 @@ pool:
 steps:
 - task: cURLUploader@2
   inputs:
-    files: '***.zip'
+    files: 
+      Contents: '***.zip'
     authType: 'UserAndPass'
     username: 'mounat'
     password: '123456'
     url: 'https://www-eu.apache.org/dist//commons/lang/source/commons-lang-2.6-src.zip'
     remotePath: 'upload/$(Build.ArtifactStagingDirectory)/'
 
-- task: CopyFiles@1
-  inputs:
-   Contents: '**/*.jar'
-   targetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
