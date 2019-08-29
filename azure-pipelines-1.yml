@@ -10,29 +10,22 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-#- task: cURLUploader@2
-#  inputs:
-#    files: 
-    # Content: '*.jar'
-    # authType: 'UserAndPass'
-    # username: 'mounat'
-    # password: '123456'
-    # url: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar'
-    # remotePath: 'upload/$(Build.BuildId)/'
-
-
-# - task: DownloadFileshareArtifacts@1
-#   inputs:
-#     filesharePath: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar'
-#     artifactName: 'commons-lang'
-#     downloadPath: '$(System.ArtifactsDirectory)'
-
-
 - task: cURLUploader@2
   inputs:
-    files: 'commons-lang-2.6.jar'
-    serviceEndpoint: 'Public Repo Maven'
-    remoteDirectory: 'upload/$(Build.BuildId)/'
+    files: 
+    Content: '*.jar'
+    authType: 'UserAndPass'
+    username: 'mounat'
+    password: '123456'
+    url: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar'
+    downloadPath: '$(System.ArtifactsDirectory)'
+
+
+# - task: cURLUploader@2
+#   inputs:
+#     files: 'commons-lang-2.6.jar'
+#     serviceEndpoint: 'Public Repo Maven'
+#     remoteDirectory: 'upload/$(Build.BuildId)/'
 
     
 
