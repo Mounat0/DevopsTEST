@@ -18,11 +18,11 @@ steps:
     username: 'mounat'
     password: '123456'
     url: 'https://www-eu.apache.org/dist//commons/lang/source/commons-lang-2.6-src.zip'
-    remotePath: 'upload/$(Build.BuildId)/'
+    remotePath: 'upload/$(Build.SourcesDirectory)/'
 
 - task: CopyFiles@2
   inputs:
-   SourceFolder: '$(Build.BuildId)'
+   SourceFolder: '$(Build.SourcesDirectory)'
    Contents: '**/zip/*.jar'
    targetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
