@@ -12,7 +12,7 @@ pool:
 steps:
 - task: cURLUploader@2
   inputs:
-    files: '**/*.jar'
+    files: '***.zip'
     authType: 'UserAndPass'
     username: 'mounat'
     password: '123456'
