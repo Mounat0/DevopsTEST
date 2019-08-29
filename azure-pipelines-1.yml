@@ -22,11 +22,18 @@ steps:
 
 
 
-- task: cURLUploader@2
+- task: DownloadFileshareArtifacts@1
   inputs:
-    files: 'commons-lang-2.6.jar'
-    serviceEndpoint: 'Public Repo Maven'
-    remotePath: 'upload/$(Build.BuildId)/'
+    filesharePath: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/'
+    artifactName: 'commons-lang-2.6-javadoc.jar'
+    downloadPath: '$(System.ArtifactsDirectory)'
+
+
+# - task: cURLUploader@2
+#   inputs:
+#     files: 'commons-lang-2.6.jar'
+#     serviceEndpoint: 'Public Repo Maven'
+#     remotePath: 'upload/$(Build.BuildId)/'
 
 
 
