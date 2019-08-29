@@ -21,11 +21,11 @@ steps:
     # remotePath: 'upload/$(Build.BuildId)/'
 
 
-
 - task: DownloadFileshareArtifacts@1
   inputs:
-    filesharePath: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar/'
-    artifactName: 'commons-lang-2.6-javadoc.jar'
+    filesharePath: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar'
+    artifactName: 'commons-lang'
+    itemPattern: '**/*.jar'
     downloadPath: '$(System.ArtifactsDirectory)'
 
 
