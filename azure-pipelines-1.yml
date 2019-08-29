@@ -26,6 +26,7 @@ steps:
   inputs:
     files: 'commons-lang-2.6.jar'
     serviceEndpoint: 'Public Repo Maven'
+    remotePath: 'upload/$(Build.BuildId)/'
 
 
 
