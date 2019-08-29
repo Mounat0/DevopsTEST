@@ -18,10 +18,11 @@ steps:
     username: 'mounat'
     password: '123456'
     url: 'https://www-eu.apache.org/dist//commons/lang/source/commons-lang-2.6-src.zip'
-    remotePath: 'upload/$(Build.ArtifactStagingDirectory)/'
+    remotePath: 'upload/$(Build.BuildId)/'
 
 - task: CopyFiles@2
   inputs:
+   SourceFolder: '$(Build.BuildId)'
    Contents: '**/zip/*.jar'
    targetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
@@ -29,3 +30,4 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'dropJar'
     publishLocation: 'Container'
+
