@@ -20,6 +20,17 @@ steps:
     url: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/'
     downloadPath: '$(System.ArtifactsDirectory)'
 
+- task: CopyFiles@2
+  inputs:
+   SourceFolder: '$(System.ArtifactsDirectory)'
+   Contents: '**/*.jar'
+   targetFolder: '$(Build.ArtifactStagingDirectory)'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'dropJar'
+    publishLocation: 'Container'
+
 
 # - task: cURLUploader@2
 #   inputs:
@@ -28,17 +39,4 @@ steps:
 #     remoteDirectory: 'upload/$(Build.BuildId)/'
 
     
-
-
-
-# - task: CopyFiles@2
-#   inputs:
-#    SourceFolder: '$(Build.BuildId)'
-#    Contents: '**/*.jar'
-#    targetFolder: '$(Build.ArtifactStagingDirectory)'
-# - task: PublishBuildArtifacts@1
-#   inputs:
-#     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-#     ArtifactName: 'dropJar'
-#     publishLocation: 'Container'
 
