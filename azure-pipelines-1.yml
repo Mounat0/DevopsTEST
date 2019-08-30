@@ -15,7 +15,7 @@ steps:
   inputs:
     filesharePath: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6-javadoc.jar'
     artifactName: 'commons-lang-2.6-javadoc.jar'
-    itemPattern: '**.jar'
+    itemPattern: '*.jar'
     downloadPath: '$(System.ArtifactsDirectory)'
 
 - task: CopyFiles@2
