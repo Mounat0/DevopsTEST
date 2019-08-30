@@ -19,6 +19,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    mavenAuthenticateFeed: true
     goals: 'package'
 
 # 9alk khas n copy so i can publish the build artifact
