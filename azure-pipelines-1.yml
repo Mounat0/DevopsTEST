@@ -11,7 +11,12 @@ pool:
 
 steps:
 
-
+- task: DownloadFileshareArtifacts@1
+  inputs:
+    filesharePath: 'https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/'
+    artifactName: 'commons-lang-2.6-javadoc.jar'
+    itemPattern: '**.jar'
+    downloadPath: '$(System.ArtifactsDirectory)'
 
 - task: CopyFiles@2
   inputs:
