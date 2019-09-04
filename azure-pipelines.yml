@@ -22,6 +22,15 @@ steps:
     mavenAuthenticateFeed: true
     goals: 'package'
 
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'mounat'
+    scannerMode: 'Other'
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
+
 # 9alk khas n copy so i can publish the build artifact
 # not used anymore if m gonna use a pipeline artifact
 - task: CopyFiles@2
