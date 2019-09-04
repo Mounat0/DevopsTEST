@@ -26,6 +26,7 @@ steps:
   inputs:
     SonarCloud: 'mounat'
     scannerMode: 'Other'
+    organization: 'munat'
 
 - task: SonarCloudPublish@1
   inputs:
