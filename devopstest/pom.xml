@@ -34,30 +34,27 @@
 	        	<version>1.2.14</version>
 	        	<!-- You can ommit this because it is default -->
 	        	<scope>compile</scope>
-	    	</dependency>
-	        
+	    	</dependency>    
 	      	<dependency>
 	    		<groupId>commons-lang</groupId>
 	    		<artifactId>commons-lang</artifactId>
 	    		<version>2.6</version>
-	    	</dependency>
-<<<<<<< HEAD
-	    	
+	    	</dependency>	   
+	    	 	
 	    	<dependency>
    				<groupId>commons-logging</groupId>
     			<artifactId>commons-logging</artifactId>
     			<version>1.1.1</version>
 			</dependency>
 			
-=======
+
 
 	    	<dependency>
    			<groupId>commons-logging</groupId>
     			<artifactId>commons-logging</artifactId>
     			<version>1.1.1</version>
 		</dependency>
-		    
->>>>>>> branch 'master' of https://github.com/Mounat0/DevopsTEST.git
+		   
 	    </dependencies>
 	    
 	    <!-- this is what i added in pom file inside repositories and distributionManagement element -->
