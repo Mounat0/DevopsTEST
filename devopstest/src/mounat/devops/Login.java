@@ -19,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 		description = "Login Servlet", 
 		urlPatterns = { "/LoginServlet" }, 
 		initParams = { 
-				@WebInitParam(name = "user", value = "Pankaj"), 
-				@WebInitParam(name = "password", value = "journaldev")
+				@WebInitParam(name = "user", value = "null"), 
+				@WebInitParam(name = "password", value = "null")
 		})
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
