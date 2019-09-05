@@ -27,12 +27,11 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     mavenAuthenticateFeed: true
     sonarCloudRunAnalysis: true
-    goals: 'package'
-    install :
+    mvn install: 
       groupId: com.oracle
       artifactId: ojdbc6
       version: 11.2.0.4.0
-
+    goals: 'package'
 
 
 - task: SonarCloudPublish@1
