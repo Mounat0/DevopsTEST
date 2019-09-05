@@ -10,6 +10,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'mounat'
+    scannerMode: 'Other'
+    organization: 'munat'
 - task: Maven@3
   inputs:
     mavenPomFile: 'devopstest/pom.xml'
@@ -20,7 +26,13 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     mavenAuthenticateFeed: true
+    sonarCloudRunAnalysis: true
     goals: 'package'
+
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 
 # 9alk khas n copy so i can publish the build artifact
 # not used anymore if m gonna use a pipeline artifact
