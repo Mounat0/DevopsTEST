@@ -9,6 +9,7 @@
 </head>
 <body>
 hi it works
+<<<<<<< HEAD
    Hello i'm trying to use CI/CD pipelines of DevOps Azure
    I am happy don't worry
    <br>
@@ -16,5 +17,12 @@ hi it works
 <br>
 <h3>Date=<%= new Date() %> </h3>
 
+=======
+    Hello i'm trying to use CI/CD pipelines of DevOps Azur   
+    I am happy don't worry
+    <h1> Today's Date is </h1>
+    <br>
+    <h3>Date=<%= new Date() %> </h3>
+>>>>>>> branch 'master' of https://github.com/Mounat0/DevopsTEST.git
 </body>
 </html>
