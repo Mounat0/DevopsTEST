@@ -28,6 +28,11 @@ steps:
     mavenAuthenticateFeed: true
     sonarCloudRunAnalysis: true
     goals: 'package'
+    install :
+      groupId: com.oracle
+      artifactId: ojdbc6
+      version: 11.2.0.4.0
+
 
 
 - task: SonarCloudPublish@1
