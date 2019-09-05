@@ -14,15 +14,5 @@
     <servlet-name>SimpleServlet</servlet-name>
     <url-pattern>/SimpleServlet</url-pattern>
   </servlet-mapping>
-    <servlet>
-    <description></description>
-    <display-name>LoginServlet</display-name>
-    <servlet-name>Login</servlet-name>
-    <servlet-class>mounat.Login</servlet-class>
-    
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/Login</url-pattern>
-  </servlet-mapping>
+
 </web-app>
