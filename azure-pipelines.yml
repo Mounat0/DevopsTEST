@@ -11,19 +11,22 @@ pool:
 
 steps:
 
-- task: SonarCloudPrepare@1
-  inputs:
-    SonarCloud: 'mounat'
-    scannerMode: 'Other'
-    organization: 'mounat0'
-
-
 # - task: SonarCloudPrepare@1
 #   inputs:
 #     SonarCloud: 'mounat'
+#     scannerMode: 'Other'
 #     organization: 'mounat0'
-#     scannerMode: 'CLI'
-#     configMode: 'file'
+
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'mounat'
+    organization: 'mounat0'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'mounat0'
+    cliProjectName: 'DevopsTEST'
+    cliSources: '.'
 - task: Maven@3
   inputs:
     mavenPomFile: 'devopstest/pom.xml'
