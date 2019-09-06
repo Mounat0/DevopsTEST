@@ -24,7 +24,7 @@ steps:
     organization: 'mounat0'
     scannerMode: 'CLI'
     configMode: 'manual'
-    cliProjectKey: 'mounat0'
+    cliProjectKey: 'Mounat0_DevopsTEST'
     cliProjectName: 'DevopsTEST'
     cliSources: '.'
 - task: Maven@3
