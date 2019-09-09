@@ -16,8 +16,6 @@ steps:
     versionSpec: '6'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: AzureStorage
-    azureResourceManagerEndpoint: gss-build-artifacts
-    azureStorageAccountName: gssbuildassets
     azureContainerName: jdk
     azureCommonVirtualFile: 'jdk1.6.0_45.zip'
     jdkDestinationDirectory: '$(Agent.ToolsDirectory)/jdk6'
