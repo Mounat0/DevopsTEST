@@ -11,6 +11,14 @@ pool:
 
 steps:
 
+- task: JavaToolInstaller@0
+  inputs:
+      versionSpec: "6"
+      jdkArchitectureOption: x64
+      jdkSourceOption: LocalDirectory
+      jdkFile: "/builds/openjdk-6.0.1_linux-x64_bin.tar.gz"
+      jdkDestinationDirectory: "/builds/binaries/externals"
+      cleanDestinationDirectory: true
 # - task: SonarCloudPrepare@1
 #   inputs:
 #     SonarCloud: 'mounat'
@@ -32,7 +40,6 @@ steps:
     mavenPomFile: 'devopstest/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.6'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
