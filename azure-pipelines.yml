@@ -11,15 +11,15 @@ pool:
 
 steps:
 
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '6'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: AzureStorage
-    azureContainerName: jdk
-    azureCommonVirtualFile: 'jdk1.6.0_45.zip'
-    jdkDestinationDirectory: '$(Agent.ToolsDirectory)/jdk6'
-    cleanDestinationDirectory: false
+# - task: JavaToolInstaller@0
+#   inputs:
+#     versionSpec: '6'
+#     jdkArchitectureOption: 'x64'
+#     jdkSourceOption: AzureStorage
+#     azureContainerName: jdk
+#     azureCommonVirtualFile: 'jdk1.6.0_45.zip'
+#     jdkDestinationDirectory: '$(Agent.ToolsDirectory)/jdk6'
+#     cleanDestinationDirectory: false
 # - task: SonarCloudPrepare@1
 #   inputs:
 #     SonarCloud: 'mounat'
