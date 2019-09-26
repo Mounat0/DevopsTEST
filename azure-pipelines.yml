@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-  
+
 steps:
 
 # - task: JavaToolInstaller@0
@@ -27,7 +27,6 @@ steps:
 #     scannerMode: 'Other'
 #     organization: 'mounat0'
 
-La version : $(laVersion)
 
 - task: SonarCloudPrepare@1
   inputs:
