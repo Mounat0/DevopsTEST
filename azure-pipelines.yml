@@ -10,7 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  La version : $(laVersion)
+  configuration : $(laVersion)
+  setQueueTime : true 
 steps:
 
 # - task: JavaToolInstaller@0
@@ -28,6 +29,7 @@ steps:
 #     scannerMode: 'Other'
 #     organization: 'mounat0'
 
+La version : $(laVersion)
 
 - task: SonarCloudPrepare@1
   inputs:
