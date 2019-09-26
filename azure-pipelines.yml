@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  La version : $laVersion
+  La version : $(laVersion)
 steps:
 
 # - task: JavaToolInstaller@0
